@@ -18,6 +18,9 @@
 /obj/docking_port/stationary/vehicle_elevator/adminlevel,
 /turf/open/space/basic,
 /area/space)
+"af" = (
+/turf/closed/wall/rock/brown,
+/area/space)
 "ag" = (
 /obj/structure/window/framed/almayer/hull,
 /obj/structure/machinery/door/poddoor/almayer/open{
@@ -26,6 +29,12 @@
 	},
 /turf/open/floor/tdome/northeast,
 /area/tdome)
+"ah" = (
+/turf/open/gm/grass/grass1,
+/area/space)
+"ai" = (
+/turf/closed/wall/rock/brown,
+/area/centcom/afterlife)
 "aj" = (
 /obj/structure/machinery/cm_vending/sorted/tech/tool_storage,
 /obj/effect/spider/stickyweb,
@@ -34,6 +43,13 @@
 "ak" = (
 /turf/closed/wall/almayer/outer,
 /area/tdome/tdome1)
+"al" = (
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"am" = (
+/obj/structure/bed/bedroll,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
 "an" = (
 /turf/open/floor/plating/plating_catwalk,
 /area/adminlevel/ert_station)
@@ -44,9 +60,52 @@
 /obj/structure/bed/sofa/south/grey/left,
 /turf/open/floor/almayer/silver/north,
 /area/adminlevel/ert_station)
+"ap" = (
+/turf/open/gm/grass/grassbeach/west,
+/area/centcom/afterlife)
+"aq" = (
+/turf/open/gm/river,
+/area/centcom/afterlife)
+"ar" = (
+/turf/open/gm/grass/grassbeach/east,
+/area/centcom/afterlife)
 "as" = (
 /turf/open/space/basic,
 /area/space)
+"at" = (
+/obj/structure/fence,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"au" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/closed/wall/rock/brown,
+/area/centcom/afterlife)
+"av" = (
+/turf/open/gm/grass/grass2,
+/area/centcom/afterlife)
+"aw" = (
+/obj/structure/flora/tree/jungle/bigtreeBOT,
+/obj/structure/flora/tree/jungle/bigtreeTL{
+	pixel_x = -111;
+	pixel_y = 130
+	},
+/obj/structure/flora/tree/jungle/bigtreeTR{
+	pixel_x = 17;
+	pixel_y = 128
+	},
+/obj/structure/bed/bedroll,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"ax" = (
+/obj/structure/prop/brazier/campfire,
+/turf/open/gm/grass/grass2,
+/area/centcom/afterlife)
+"ay" = (
+/obj/structure/flora/jungle/alienplant1{
+	light_range = 7
+	},
+/turf/open/gm/river,
+/area/centcom/afterlife)
 "az" = (
 /obj/effect/decal/warning_stripes{
 	icon_state = "W"
@@ -80,17 +139,501 @@
 	},
 /turf/open/space,
 /area/space)
+"aD" = (
+/turf/closed/wall/solaris/reinforced/hull,
+/area/centcom/afterlife)
 "aE" = (
 /turf/open/floor/tdome/w_y0/north,
 /area/tdome)
+"aF" = (
+/obj/structure/bed/bedroll,
+/turf/open/gm/grass/grass2,
+/area/centcom/afterlife)
+"aG" = (
+/obj/structure/surface/rack,
+/obj/item/trash/tray,
+/obj/item/trash/tray{
+	pixel_y = 4
+	},
+/obj/item/trash/tray{
+	pixel_y = 8
+	},
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"aH" = (
+/turf/open/floor/kutjevo/colors/orange/edge,
+/area/centcom/afterlife)
+"aI" = (
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"aJ" = (
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
 "aK" = (
 /obj/structure/closet/cabinet,
 /turf/open/floor/carpet,
 /area/adminlevel/ert_station)
+"aL" = (
+/turf/open/asphalt/cement/cement1,
+/area/centcom/afterlife)
+"aM" = (
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"aN" = (
+/obj/structure/reagent_dispensers/water_cooler{
+	density = 0;
+	pixel_x = 12;
+	pixel_y = 6
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"aO" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"aP" = (
+/obj/structure/blocker/invisible_wall,
+/turf/open/gm/grass/grass2,
+/area/centcom/afterlife)
+"aQ" = (
+/obj/structure/window/framed/solaris/reinforced/hull,
+/turf/open/space/basic,
+/area/centcom/afterlife)
+"aR" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"aS" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"aT" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"aU" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"aV" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"aW" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"aX" = (
+/obj/structure/machinery/disposal{
+	pixel_x = 4
+	},
+/turf/open/asphalt/cement/cement1,
+/area/centcom/afterlife)
+"aY" = (
+/obj/structure/machinery/disposal,
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"aZ" = (
+/obj/structure/window/framed/solaris/reinforced/hull,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"ba" = (
+/obj/structure/surface/table,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"bb" = (
+/obj/structure/surface/table,
+/obj/item/trash/tray,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bc" = (
+/obj/structure/surface/table,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"bd" = (
+/obj/structure/machinery/vending/dinnerware{
+	pixel_x = -9;
+	density = 0
+	},
+/obj/effect/decal/strata_decals/grime/grime4,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"be" = (
+/obj/structure/machinery/vending/dinnerware{
+	pixel_x = 11;
+	density = 0
+	},
+/turf/open/asphalt/cement/cement1,
+/area/centcom/afterlife)
+"bf" = (
+/obj/structure/surface/table,
+/obj/item/trash/tray,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"bg" = (
+/obj/structure/surface/table,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bh" = (
+/turf/open/gm/grass/gbcorner/south_west,
+/area/centcom/afterlife)
+"bi" = (
+/turf/open/gm/grass/grassbeach/south,
+/area/centcom/afterlife)
+"bj" = (
+/obj/structure/prop/rock/brown{
+	pixel_x = -10;
+	pixel_y = -4
+	},
+/turf/open/gm/river,
+/area/centcom/afterlife)
+"bk" = (
+/obj/structure/machinery/cm_vending/clothing/marine{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bl" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/window/framed/solaris/reinforced/hull,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"bm" = (
+/obj/structure/machinery/cm_vending/gear/leader{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
 "bn" = (
 /obj/structure/closet/boxinggloves,
 /turf/open/floor/almayer/silver,
 /area/adminlevel/ert_station)
+"bo" = (
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"bp" = (
+/obj/structure/machinery/cm_vending/gear/tl{
+	density = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"bq" = (
+/obj/structure/machinery/cm_vending/clothing/specialist{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
+"br" = (
+/obj/structure/machinery/cm_vending/clothing/specialist{
+	density = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"bs" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"bt" = (
+/obj/structure/bed/chair,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bu" = (
+/obj/structure/bed/chair,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"bv" = (
+/obj/structure/bed/chair,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"bw" = (
+/obj/structure/bed/chair,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bx" = (
+/obj/structure/flora/jungle/alienplant1{
+	light_range = 7;
+	layer = 4.11
+	},
+/turf/open/gm/river,
+/area/centcom/afterlife)
+"by" = (
+/obj/structure/machinery/cm_vending/clothing/marine{
+	pixel_x = -32;
+	density = 0
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"bz" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"bA" = (
+/obj/structure/machinery/cm_vending/clothing/leader{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
+"bB" = (
+/obj/structure/machinery/cm_vending/clothing/tl{
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"bC" = (
+/obj/structure/machinery/cm_vending/gear/spec{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
+"bD" = (
+/obj/structure/machinery/cm_vending/gear/spec{
+	pixel_x = 32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"bE" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/kutjevo/colors/orange/inner_corner,
+/area/centcom/afterlife)
+"bF" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"bG" = (
+/obj/structure/machinery/vending/coffee{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"bH" = (
+/obj/structure/machinery/vending/cola{
+	density = 0;
+	pixel_y = 16
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/colors/orange/inner_corner,
+/area/centcom/afterlife)
+"bI" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/obj/effect/decal/strata_decals/grime/grime1{
+	pixel_y = -14
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"bJ" = (
+/obj/structure/machinery/cm_vending/sorted/marine_food{
+	density = 0;
+	pixel_y = 16
+	},
+/turf/open/floor/kutjevo/colors/orange/inner_corner{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"bK" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/centcom/afterlife)
+"bL" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/gm/grass/grass1,
+/area/centcom/afterlife)
+"bM" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/almayer/glass,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"bN" = (
+/obj/structure/prop/rock/brown{
+	pixel_y = 14;
+	pixel_x = 9
+	},
+/turf/open/gm/river,
+/area/centcom/afterlife)
+"bO" = (
+/turf/open/gm/grass/grassbeach/north,
+/area/centcom/afterlife)
+"bP" = (
+/turf/open/gm/grass/gbcorner/north_east,
+/area/centcom/afterlife)
+"bQ" = (
+/obj/structure/machinery/door/airlock/multi_tile/almayer/marine,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"bR" = (
+/obj/structure/machinery/door/airlock/almayer/marine{
+	dir = 2
+	},
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"bS" = (
+/obj/structure/machinery/door/poddoor/almayer{
+	dir = 4
+	},
+/turf/closed/wall/solaris/reinforced/hull,
+/area/centcom/afterlife)
+"bT" = (
+/turf/open/gm/dirtgrassborder/south,
+/area/centcom/afterlife)
+"bU" = (
+/obj/structure/sign/safety/galley{
+	pixel_y = -24;
+	pixel_x = 7
+	},
+/obj/structure/machinery/disposal{
+	pixel_y = -3;
+	density = 0
+	},
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
+/area/centcom/afterlife)
+"bV" = (
+/obj/structure/sign/safety/galley{
+	pixel_y = -24;
+	pixel_x = 7
+	},
+/obj/structure/sink{
+	dir = 1;
+	pixel_y = -8
+	},
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
+/area/centcom/afterlife)
+"bW" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner/south_east,
+/area/centcom/afterlife)
+"bX" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner/south_west,
+/area/centcom/afterlife)
+"bY" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_west,
+/area/centcom/afterlife)
+"bZ" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/south_east,
+/area/centcom/afterlife)
+"ca" = (
+/turf/open/gm/dirt,
+/area/centcom/afterlife)
+"cb" = (
+/turf/open/asphalt/cement/cement12,
+/area/centcom/afterlife)
+"cc" = (
+/obj/effect/decal/strata_decals/grime/grime3,
+/turf/open/asphalt/cement/cement12,
+/area/centcom/afterlife)
+"cd" = (
+/turf/open/asphalt/cement,
+/area/centcom/afterlife)
+"ce" = (
+/obj/structure/barricade/handrail/kutjevo,
+/turf/open/floor/kutjevo/tan/alt_edge,
+/area/centcom/afterlife)
+"cf" = (
+/turf/open/asphalt/cement/cement4,
+/area/centcom/afterlife)
+"cg" = (
+/obj/structure/barricade/handrail/kutjevo{
+	dir = 1;
+	pixel_y = 15
+	},
+/turf/open/floor/kutjevo/tan/alt_edge{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"ch" = (
+/obj/structure/sign/safety/medical{
+	pixel_x = 8;
+	pixel_y = 24
+	},
+/turf/open/asphalt/cement/cement4,
+/area/centcom/afterlife)
+"ci" = (
+/turf/open/gm/dirtgrassborder/north,
+/area/centcom/afterlife)
+"cj" = (
+/obj/structure/flag/plantable/ua,
+/turf/open/gm/dirtgrassborder/north,
+/area/centcom/afterlife)
+"ck" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2,
+/area/centcom/afterlife)
+"cl" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner2/north_east,
+/area/centcom/afterlife)
+"cm" = (
+/turf/open/gm/dirtgrassborder/grassdirt_corner/north_east,
+/area/centcom/afterlife)
+"cn" = (
+/obj/structure/sign/prop3{
+	pixel_y = 32
+	},
+/turf/open/gm/dirtgrassborder/grassdirt_corner/north_west,
+/area/centcom/afterlife)
 "co" = (
 /obj/structure/machinery/status_display{
 	pixel_y = 30
@@ -98,12 +641,159 @@
 /obj/structure/bed/sofa/south/grey,
 /turf/open/floor/almayer/silver/north,
 /area/adminlevel/ert_station)
+"cp" = (
+/obj/structure/sign/safety/restrictedarea{
+	pixel_y = 24
+	},
+/turf/open/gm/dirtgrassborder/north,
+/area/centcom/afterlife)
+"cq" = (
+/obj/structure/machinery/door/airlock/almayer/medical/glass{
+	dir = 2
+	},
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"cr" = (
+/obj/structure/machinery/door/airlock/almayer/engineering/glass{
+	dir = 2
+	},
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"cs" = (
+/obj/structure/window/framed/solaris/reinforced/hull,
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"ct" = (
+/obj/structure/tent_curtain,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"cu" = (
+/obj/structure/tent_curtain,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement1,
+/area/centcom/afterlife)
+"cv" = (
+/obj/structure/window/framed/solaris/reinforced/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "Afterlife SEA Office Shutters";
+	name = "\improper Privacy Shutters"
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"cw" = (
+/obj/structure/machinery/door/airlock/almayer/command{
+	access_modified = 1;
+	name = "\improper Senior Enlisted Advisor's Office";
+	req_access = null;
+	req_access_txt = "19;29";
+	dir = 1
+	},
+/turf/open/space/basic,
+/area/centcom/afterlife)
+"cx" = (
+/obj/structure/machinery/cm_vending/gear/medic{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/tan,
+/area/centcom/afterlife)
+"cy" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"cz" = (
+/turf/open/floor/kutjevo/tan,
+/area/centcom/afterlife)
+"cA" = (
+/obj/structure/machinery/cm_vending/gear/engi{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"cB" = (
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"cC" = (
+/obj/structure/fence,
+/turf/open/gm/grass/grass2,
+/area/centcom/afterlife)
 "cD" = (
 /obj/structure/machinery/cm_vending/sorted/medical/blood{
 	req_access = null
 	},
 /turf/open/floor/almayer/dark_sterile,
 /area/adminlevel/ert_station)
+"cE" = (
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cF" = (
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = -2
+	},
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = 13;
+	layer = 2.97
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cG" = (
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = -2
+	},
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = 13;
+	layer = 2.97
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 2;
+	anchored = 1
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cH" = (
+/obj/item/bedsheet/brown,
+/obj/item/bedsheet/brown{
+	pixel_y = 13
+	},
+/obj/structure/bed,
+/obj/structure/bed{
+	pixel_y = 13
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cI" = (
+/obj/structure/window/framed/solaris/reinforced/hull,
+/obj/structure/machinery/door/poddoor/shutters/almayer{
+	id = "Afterlife SEA Office Shutters";
+	name = "\improper Privacy Shutters";
+	dir = 4
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"cJ" = (
+/obj/structure/target{
+	name = "punching bag"
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
 "cK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -111,6 +801,78 @@
 	},
 /turf/open/floor/almayer/floor,
 /area/adminlevel/ert_station)
+"cL" = (
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cM" = (
+/turf/open/floor/kutjevo/colors/blue/inner_corner{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"cN" = (
+/obj/structure/filingcabinet{
+	pixel_x = 8
+	},
+/obj/structure/filingcabinet/chestdrawer{
+	pixel_x = -7
+	},
+/turf/open/floor/kutjevo/colors/blue/inner_corner{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"cO" = (
+/obj/structure/machinery/cm_vending/clothing/medic{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/kutjevo/tan,
+/area/centcom/afterlife)
+"cP" = (
+/obj/structure/machinery/cm_vending/clothing/engi{
+	pixel_x = -32;
+	density = 0
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"cQ" = (
+/obj/structure/surface/rack,
+/obj/item/fuel_cell{
+	pixel_x = 6;
+	pixel_y = -2;
+	fuel_amount = 0
+	},
+/obj/item/fuel_cell{
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/obj/item/fuel_cell{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/fuel_cell{
+	pixel_x = 10;
+	pixel_y = 3;
+	fuel_amount = 0
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"cR" = (
+/obj/effect/landmark/start/afterlife,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cS" = (
+/obj/effect/landmark/start/afterlife,
+/obj/effect/decal/cleanable/dirt,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"cT" = (
+/obj/structure/bed/chair{
+	dir = 1
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
 "cU" = (
 /obj/effect/step_trigger/teleporter/random{
 	affect_ghosts = 1;
@@ -124,6 +886,159 @@
 	},
 /turf/open/space/transit/east/shuttlespace_ew4,
 /area/space)
+"cV" = (
+/turf/open/floor/kutjevo/colors/blue/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
+"cW" = (
+/obj/structure/machinery/vending/sea,
+/turf/open/floor/kutjevo/colors/blue/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"cX" = (
+/obj/structure/sign/nosmoking_1{
+	pixel_x = -32
+	},
+/obj/structure/machinery/disposal{
+	pixel_x = -6
+	},
+/turf/open/floor/kutjevo/colors/cyan,
+/area/centcom/afterlife)
+"cY" = (
+/turf/open/floor/kutjevo/colors/cyan,
+/area/centcom/afterlife)
+"cZ" = (
+/obj/structure/machinery/disposal{
+	pixel_x = -6
+	},
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"da" = (
+/obj/structure/surface/table/reinforced/prison,
+/obj/structure/machinery/fuelcell_recycler/full{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"db" = (
+/obj/structure/machinery/cm_vending/clothing/smartgun{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
+"dc" = (
+/obj/structure/machinery/cm_vending/clothing/smartgun{
+	density = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"dd" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/open/asphalt/cement/cement3,
+/area/centcom/afterlife)
+"de" = (
+/obj/structure/surface/table,
+/obj/item/ashtray/plastic{
+	pixel_x = 8;
+	pixel_y = -4
+	},
+/obj/item/storage/fancy/cigar,
+/obj/item/tool/lighter/zippo,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"df" = (
+/obj/structure/surface/table,
+/obj/item/paper_bin/uscm,
+/obj/item/tool/pen,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"dg" = (
+/obj/structure/machinery/door_control{
+	id = "Afterlife SEA Office Shutters";
+	name = "SEA Office Shutters";
+	pixel_y = 12
+	},
+/obj/structure/surface/table,
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"dh" = (
+/obj/structure/machinery/cm_vending/clothing/sea,
+/obj/structure/sign/prop2{
+	pixel_x = 32
+	},
+/turf/open/floor/kutjevo/colors/blue/edge{
+	dir = 4
+	},
+/area/centcom/afterlife)
+"di" = (
+/obj/structure/machinery/power/reactor/colony,
+/turf/open/floor/kutjevo,
+/area/centcom/afterlife)
+"dj" = (
+/obj/structure/machinery/cm_vending/gear/smartgun{
+	density = 0;
+	pixel_x = -32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/east,
+/area/centcom/afterlife)
+"dk" = (
+/obj/structure/machinery/cm_vending/gear/smartgun{
+	density = 0;
+	pixel_x = 32
+	},
+/turf/open/floor/kutjevo/tan/grey_edge/west,
+/area/centcom/afterlife)
+"dl" = (
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = -2
+	},
+/obj/structure/closet/crate/green{
+	anchored = 1;
+	pixel_y = 13;
+	layer = 2.97
+	},
+/obj/structure/largecrate/random/mini/ammo{
+	pixel_y = 7;
+	anchored = 1
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"dm" = (
+/obj/structure/bed/chair/comfy/blue,
+/obj/structure/sign/banners/united_americas_flag{
+	pixel_y = 32
+	},
+/turf/open/floor/kutjevo/fake_wood,
+/area/centcom/afterlife)
+"dn" = (
+/turf/open/floor/kutjevo/colors/blue/inner_corner,
+/area/centcom/afterlife)
+"do" = (
+/obj/structure/machinery/cm_vending/gear/sea,
+/turf/open/floor/kutjevo/colors/blue/inner_corner{
+	dir = 1
+	},
+/area/centcom/afterlife)
+"dp" = (
+/obj/structure/machinery/cm_vending/sorted/tech/comtech_tools{
+	pixel_x = 5
+	},
+/turf/open/asphalt/cement/cement13,
+/area/centcom/afterlife)
+"dq" = (
+/obj/structure/machinery/cm_vending/sorted/tech/electronics_storage,
+/turf/open/floor/kutjevo/colors/orange/edge{
+	dir = 8
+	},
+/area/centcom/afterlife)
 "dr" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "pottedplant_22"
@@ -135,6 +1050,16 @@
 	name = "reinforced hull"
 	},
 /area/centcom/living)
+"dt" = (
+/turf/open/gm/dirtgrassborder/west,
+/area/centcom/afterlife)
+"du" = (
+/turf/open/gm/dirtgrassborder/east,
+/area/centcom/afterlife)
+"dv" = (
+/obj/structure/machinery/door/poddoor/almayer,
+/turf/closed/wall/solaris/reinforced/hull,
+/area/centcom/afterlife)
 "dw" = (
 /turf/open/floor/almayer/test_floor5,
 /area/supply/dock/uscm)
@@ -2052,28 +2977,28 @@
 /area/adminlevel/ert_station)
 
 (1,1,1) = {"
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
+as
 as
 as
 as
@@ -2204,35 +3129,35 @@ aa
 hp
 "}
 (2,1,1) = {"
-aa
+as
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
+TT
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
 aa
 aa
 aa
@@ -2356,7 +3281,8 @@ aa
 aa
 "}
 (3,1,1) = {"
-aa
+as
+TT
 as
 as
 as
@@ -2381,9 +3307,8 @@ as
 as
 as
 as
+TT
 as
-as
-aa
 aa
 aa
 aa
@@ -2508,34 +3433,34 @@ aa
 aa
 "}
 (4,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+ai
+ai
+ai
+ai
+aD
+aD
+bS
+bS
+bS
+bS
+aD
+aD
+ai
+ai
+ai
+ai
+ai
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -2660,34 +3585,34 @@ aa
 aa
 "}
 (5,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+ai
+ai
+al
+al
+cC
+al
+ci
+cf
+cb
+bT
+al
+at
+av
+al
+al
+av
+ai
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -2812,34 +3737,34 @@ aa
 aa
 "}
 (6,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+aD
+aD
+aD
+aD
+aD
+aD
+ci
+cf
+cb
+bT
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -2964,34 +3889,34 @@ aa
 aa
 "}
 (7,1,1) = {"
-aa
 as
+TT
 as
+ai
+av
+aD
+cE
+cS
+cR
+cE
+aD
+ci
+cf
+cb
+bT
+aD
+bE
+bs
+ba
+aS
+aG
+aD
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -3116,34 +4041,34 @@ aa
 aa
 "}
 (8,1,1) = {"
-aa
 as
+TT
 as
+aD
+cC
+aD
+cE
+cR
+cR
+cE
+aD
+cj
+cf
+cb
+bT
+aD
+bF
+bt
+bb
+aT
+aH
+aD
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -3268,34 +4193,34 @@ aa
 aa
 "}
 (9,1,1) = {"
-aa
 as
+TT
 as
+dv
+dt
+aD
+dl
+cR
+cR
+cF
+aD
+ck
+cf
+cc
+bU
+aD
+bG
+bu
+bc
+aU
+aI
+aD
+au
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -3420,35 +4345,35 @@ aa
 aa
 "}
 (10,1,1) = {"
-aa
+as
+TT
+as
+dv
+aJ
+ct
+aJ
+dd
+aJ
+aJ
+ct
+aJ
+cd
+cd
+aJ
+bM
+aJ
+aJ
+bd
+aJ
+aJ
+aD
+ai
+ai
+ai
+as
+TT
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
 aa
 aa
 aa
@@ -3572,34 +4497,34 @@ aa
 aa
 "}
 (11,1,1) = {"
-aa
 as
+TT
 as
+dv
+aL
+cu
+aL
+aL
+aL
+aL
+cu
+aL
+cd
+cd
+aL
+aL
+aL
+aL
+be
+aL
+aL
+aD
+ai
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -3724,35 +4649,35 @@ aa
 aa
 "}
 (12,1,1) = {"
-aa
+as
+TT
+as
+dv
+du
+aD
+cF
+cR
+cR
+cG
+aD
+cl
+cf
+cb
+bV
+aD
+bH
+bv
+bf
+aV
+aM
+aD
+al
+ai
+ai
+as
+TT
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
 aa
 aa
 aa
@@ -3876,35 +4801,35 @@ aa
 aa
 "}
 (13,1,1) = {"
-aa
+as
+TT
+as
+aD
+at
+aD
+cE
+cR
+cR
+cH
+aD
+cj
+cf
+cb
+bT
+aD
+bI
+bw
+bg
+aT
+aH
+aD
+av
+ai
+ai
+as
+TT
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
 aa
 aa
 aa
@@ -4028,34 +4953,34 @@ aa
 aa
 "}
 (14,1,1) = {"
-aa
 as
+TT
 as
+ai
+av
+aD
+cE
+cR
+cS
+cE
+aD
+ci
+cf
+cb
+bT
+aD
+bJ
+bu
+bc
+aW
+aN
+aD
+av
+ai
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -4180,34 +5105,34 @@ aa
 aa
 "}
 (15,1,1) = {"
-aa
 as
+TT
 as
+ai
+al
+aD
+aD
+aD
+aD
+aD
+aD
+cm
+cf
+cb
+bW
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+al
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aa
 aa
 aa
@@ -4332,35 +5257,35 @@ aa
 aa
 "}
 (16,1,1) = {"
-aa
 as
+TT
 as
+ai
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+cg
+ce
+ap
+ap
+ap
+ap
+bh
+al
+al
+al
+al
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aC
+TT
 aC
 aC
 aC
@@ -4484,34 +5409,34 @@ aa
 aa
 "}
 (17,1,1) = {"
-aa
 as
+TT
 as
+ai
+aq
+ay
+aq
+aq
+aq
+aq
+aq
+aq
+cg
+ce
+aq
+bx
+aq
+aq
+bi
+av
+aO
+al
+aw
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 aa
@@ -4636,34 +5561,34 @@ aa
 aa
 "}
 (18,1,1) = {"
-aa
 as
+TT
 as
+ai
+aq
+aq
+aq
+aq
+aq
+ay
+aq
+aq
+cg
+ce
+aq
+aq
+aq
+aq
+bi
+av
+aP
+aF
+ax
+am
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -4788,34 +5713,34 @@ aa
 aa
 "}
 (19,1,1) = {"
-aa
 as
+TT
 as
+ai
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+cg
+ce
+ar
+bN
+aq
+aq
+bi
+al
+aO
+al
+am
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -4940,34 +5865,34 @@ aa
 aa
 "}
 (20,1,1) = {"
-aa
 as
+TT
 as
+ai
+al
+aD
+aD
+aD
+cI
+cI
+aD
+cn
+cf
+cb
+bX
+bO
+aq
+bx
+bi
+al
+al
+al
+av
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -5092,34 +6017,34 @@ aa
 aa
 "}
 (21,1,1) = {"
-aa
 as
+TT
 as
+ai
+at
+aD
+cL
+de
+cL
+cJ
+cv
+ci
+cf
+cb
+bT
+bO
+aq
+aq
+bj
+ap
+ap
+ap
+ap
+ap
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -5244,34 +6169,34 @@ aa
 aa
 "}
 (22,1,1) = {"
-aa
 as
+TT
 as
+ai
+al
+aD
+dm
+df
+cT
+cL
+cv
+ck
+cf
+cb
+bT
+bO
+aq
+aq
+aq
+aq
+aq
+aq
+ay
+aq
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -5396,34 +6321,34 @@ aa
 aa
 "}
 (23,1,1) = {"
-aa
 as
+TT
 as
+ai
+al
+aD
+cL
+dg
+cT
+cL
+cw
+ca
+cf
+cb
+bT
+bO
+aq
+aq
+aq
+ay
+aq
+aq
+aq
+aq
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -5548,34 +6473,34 @@ aa
 aa
 "}
 (24,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+aD
+dn
+cV
+cV
+cM
+cv
+cl
+cf
+cb
+bT
+bP
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ar
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 OT
@@ -5700,34 +6625,34 @@ aa
 aa
 "}
 (25,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+aD
+do
+dh
+cW
+cN
+cv
+ci
+cf
+cb
+bT
+al
+al
+al
+al
+al
+al
+al
+al
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 aa
@@ -5852,34 +6777,34 @@ aa
 aa
 "}
 (26,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+aD
+aD
+aD
+cI
+cI
+aD
+cp
+cf
+cb
+bT
+al
+aD
+aD
+aD
+aD
+al
+al
+al
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aa
 aa
@@ -6004,34 +6929,34 @@ aa
 aa
 "}
 (27,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+ai
+ai
+al
+al
+al
+al
+ci
+cf
+cb
+bY
+aD
+aD
+by
+bk
+aD
+aD
+al
+al
+al
+ai
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
 aC
 aC
 aC
@@ -6156,35 +7081,35 @@ aa
 aa
 "}
 (28,1,1) = {"
-aa
+as
+TT
+as
+ai
+ai
+aD
+aD
+aD
+aD
+aD
+aD
+ci
+cf
+cd
+aJ
+bQ
+aJ
+bz
+aJ
+aJ
+aQ
+al
+al
+al
+ai
+as
+TT
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
 aa
 aa
 aa
@@ -6308,39 +7233,39 @@ aa
 aa
 "}
 (29,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+ch
+cd
+aL
+aL
+bK
+aL
+aL
+aX
+aQ
+at
+at
+at
+ai
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
-aa
-aa
-aa
-aa
+TT
+TT
+TT
+aC
+aC
+aC
+aC
 aa
 aC
 aa
@@ -6460,39 +7385,39 @@ aa
 aa
 "}
 (30,1,1) = {"
-aa
+as
+TT
+as
+ai
+ai
+aD
+cx
+cO
+cX
+cO
+cx
+aQ
+cf
+cb
+bZ
+aD
+aD
+aZ
+bl
+aD
+aD
+al
+al
+al
+ai
 as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
-aa
-aa
 aa
 aa
+aa
+aC
 aa
 aC
 aa
@@ -6612,39 +7537,39 @@ aa
 aa
 "}
 (31,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+bo
+cy
+bo
+bo
+cy
+cq
+cd
+cb
+bT
+al
+bL
+al
+al
+at
+aR
+al
+al
+ai
+ai
+ai
+af
+af
+af
+af
+af
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aC
 aC
@@ -6764,39 +7689,39 @@ aa
 aa
 "}
 (32,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+cz
+cz
+cY
+cz
+cz
+aD
+cf
+cb
+bT
+al
+al
+al
+al
+at
+al
+al
+ai
+ai
+ai
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aC
@@ -6916,39 +7841,39 @@ aa
 aa
 "}
 (33,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+aD
+aD
+aD
+aD
+aD
+aD
+cf
+cb
+bT
+al
+aD
+aD
+aD
+aD
+al
+ai
+ai
+ai
+al
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aC
@@ -7068,39 +7993,39 @@ aa
 aa
 "}
 (34,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+cP
+cA
+cZ
+cP
+cA
+aD
+cf
+cb
+bY
+aD
+aD
+bA
+bm
+aD
+aD
+ai
+al
+al
+al
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aa
@@ -7220,40 +8145,40 @@ aa
 aa
 "}
 (35,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+dp
+bo
+bo
+bo
+bo
+cr
+cf
+cd
+bo
+bR
+bo
+bo
+bo
+aY
+aD
+ai
+al
+al
+al
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aC
+aC
 aa
 aa
 aC
@@ -7372,40 +8297,40 @@ aa
 aa
 "}
 (36,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+dq
+cB
+cB
+cB
+cB
+cs
+cf
+cb
+ca
+aD
+aZ
+aZ
+aZ
+aZ
+aD
+ai
+al
+al
+al
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aC
@@ -7524,40 +8449,40 @@ aa
 aa
 "}
 (37,1,1) = {"
+as
+TT
+as
+ai
+ai
+aD
+aD
+di
+da
+cQ
+aD
+aD
+cf
+cd
+bo
+bR
+bo
+bo
+bo
+aY
+aD
+ai
+al
+al
+al
+al
+ah
+ah
+as
 aa
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
+af
 aa
-aa
-aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aC
@@ -7676,40 +8601,40 @@ aa
 aa
 "}
 (38,1,1) = {"
-aa
 as
+TT
 as
+ai
+ai
+ai
+aD
+aD
+aD
+aD
+aD
+ci
+cd
+cb
+bZ
+aD
+aD
+bB
+bp
+aD
+aD
+ai
+al
+al
+al
+al
+ah
+ah
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-aa
-aa
-aa
-aa
 aa
 aa
+af
 aa
+aC
 aa
 aa
 aC
@@ -7829,39 +8754,39 @@ aa
 "}
 (39,1,1) = {"
 aa
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ai
+ai
+ai
+al
+al
+al
+al
+al
+ci
+cf
+cb
+bT
+al
+aD
+aD
+aD
+aD
+al
+ai
+al
+al
+al
+al
+ah
+ah
 as
 aa
 aa
+af
 aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aC
@@ -7981,39 +8906,39 @@ aa
 "}
 (40,1,1) = {"
 aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
-aa
+TT
 as
+ai
+ai
+ai
+aD
+aD
+aD
+aD
+al
+ci
+cf
+cb
+bT
+al
+al
+al
+al
+at
+al
+ai
+al
+al
+al
+al
+ah
+ah
 as
-as
-as
-as
 aa
 aa
+af
 aa
-aa
-aa
-aa
-aa
+aC
 aa
 aa
 aa
@@ -8133,39 +9058,39 @@ aa
 "}
 (41,1,1) = {"
 as
+TT
+as
+ai
+ai
+aD
+aD
+dj
+db
+aD
+aD
+ck
+cf
+cb
+bT
+al
+al
+al
+al
+at
+al
+ai
+al
+al
+al
+al
+ah
+ah
 as
 as
 as
+af
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+TT
 as
 as
 as
@@ -8285,39 +9210,39 @@ aa
 "}
 (42,1,1) = {"
 as
+TT
+as
+ai
+al
+aD
+aJ
+aJ
+aJ
+aJ
+bQ
+aJ
+cd
+cb
+bT
+al
+aD
+aD
+aD
+aD
+al
+ai
+al
+al
+al
+al
+ah
 as
 as
 as
 as
+af
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+TT
 as
 as
 as
@@ -8437,39 +9362,39 @@ aa
 "}
 (43,1,1) = {"
 as
+TT
+as
+ai
+al
+aD
+aX
+aL
+aL
+aL
+aL
+aL
+cd
+cb
+bY
+aD
+aD
+bC
+bq
+aD
+aD
+ai
+al
+al
+al
+al
+ah
 as
 as
 as
 as
+af
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+TT
 as
 as
 as
@@ -8589,37 +9514,37 @@ aa
 "}
 (44,1,1) = {"
 as
+TT
+as
+ai
+al
+aD
+aD
+dk
+dc
+aD
+aD
+cl
+cf
+cd
+aJ
+bQ
+aJ
+aJ
+aJ
+aJ
+aD
+ai
+al
+al
+al
+al
+ah
 as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
 as
 as
 as
@@ -8741,32 +9666,32 @@ aa
 "}
 (45,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ai
+al
+al
+aD
+aD
+aD
+aD
+al
+ci
+cf
+cd
+aL
+aL
+aL
+aL
+aL
+aX
+aD
+ai
+al
+al
+al
+al
+ah
 as
 as
 as
@@ -8893,32 +9818,32 @@ aa
 "}
 (46,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ai
+al
+al
+al
+al
+al
+al
+al
+ci
+cf
+cb
+bZ
+aD
+aD
+bD
+br
+aD
+aD
+ai
+al
+al
+al
+al
+ah
 as
 as
 as
@@ -9045,32 +9970,32 @@ aa
 "}
 (47,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ai
+al
+al
+al
+al
+al
+al
+al
+al
+cf
+cb
+al
+al
+aD
+aD
+aD
+aD
+al
+ai
+ai
+al
+al
+al
+ah
 as
 as
 as
@@ -9197,33 +10122,33 @@ aa
 "}
 (48,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ai
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+ai
+al
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -9349,28 +10274,28 @@ aa
 "}
 (49,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -9501,28 +10426,28 @@ aa
 "}
 (50,1,1) = {"
 as
+TT
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+af
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -9653,6 +10578,9 @@ aa
 "}
 (51,1,1) = {"
 as
+TT
+as
+af
 as
 as
 as
@@ -9666,15 +10594,12 @@ as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ah
+ah
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -9805,6 +10730,9 @@ aa
 "}
 (52,1,1) = {"
 as
+TT
+as
+af
 as
 as
 as
@@ -9818,15 +10746,12 @@ as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ah
+ah
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -9957,6 +10882,9 @@ aa
 "}
 (53,1,1) = {"
 as
+TT
+as
+af
 as
 as
 as
@@ -9970,15 +10898,12 @@ as
 as
 as
 as
-as
-as
-as
-as
-as
-as
-as
-as
-as
+ah
+ah
+ah
+ah
+ah
+ah
 as
 as
 as
@@ -10109,9 +11034,9 @@ aa
 "}
 (54,1,1) = {"
 as
+TT
 as
-as
-as
+af
 as
 as
 as
@@ -10261,9 +11186,9 @@ aa
 "}
 (55,1,1) = {"
 as
+TT
 as
-as
-as
+af
 as
 as
 as
@@ -10413,7 +11338,7 @@ aa
 "}
 (56,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -10565,7 +11490,7 @@ aa
 "}
 (57,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -10717,7 +11642,7 @@ aa
 "}
 (58,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -10869,7 +11794,7 @@ aa
 "}
 (59,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11021,7 +11946,7 @@ aa
 "}
 (60,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11173,7 +12098,7 @@ aa
 "}
 (61,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11325,7 +12250,7 @@ aa
 "}
 (62,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11477,7 +12402,7 @@ aa
 "}
 (63,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11629,7 +12554,7 @@ aa
 "}
 (64,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11781,7 +12706,7 @@ aa
 "}
 (65,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -11933,7 +12858,7 @@ aa
 "}
 (66,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12085,7 +13010,7 @@ aa
 "}
 (67,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12237,7 +13162,7 @@ aa
 "}
 (68,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12389,7 +13314,7 @@ aa
 "}
 (69,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12541,7 +13466,7 @@ aa
 "}
 (70,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12693,7 +13618,7 @@ aa
 "}
 (71,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12845,7 +13770,7 @@ aa
 "}
 (72,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -12997,7 +13922,7 @@ aa
 "}
 (73,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13149,7 +14074,7 @@ aa
 "}
 (74,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13301,7 +14226,7 @@ aa
 "}
 (75,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13453,7 +14378,7 @@ aa
 "}
 (76,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13605,7 +14530,7 @@ aa
 "}
 (77,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13757,7 +14682,7 @@ aa
 "}
 (78,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -13909,7 +14834,7 @@ aa
 "}
 (79,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14061,7 +14986,7 @@ aa
 "}
 (80,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14213,7 +15138,7 @@ aa
 "}
 (81,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14365,7 +15290,7 @@ aa
 "}
 (82,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14517,7 +15442,7 @@ aa
 "}
 (83,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14669,7 +15594,7 @@ aa
 "}
 (84,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14821,7 +15746,7 @@ aa
 "}
 (85,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -14973,7 +15898,7 @@ aa
 "}
 (86,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -15125,7 +16050,7 @@ as
 "}
 (87,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -15277,7 +16202,7 @@ as
 "}
 (88,1,1) = {"
 as
-as
+TT
 as
 as
 as
@@ -15429,7 +16354,7 @@ as
 "}
 (89,1,1) = {"
 as
-as
+TT
 as
 as
 as

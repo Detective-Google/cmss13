@@ -159,6 +159,47 @@
 // M.Login() //wat
 	return
 
+/mob/dead/observer/verb/join_afterlife()
+	set name = "Visit the Afterlife"
+	set category = "Ghost"
+
+	if(SSticker.current_state < GAME_STATE_PLAYING || !SSticker.mode)
+		to_chat(usr, SPAN_BOLDNOTICE("The game must start!"))
+		return
+
+	if (!GLOB.afterlife_allowed)
+		to_chat(usr, SPAN_BOLDNOTICE("The Afterlife is currently closed by staff."))
+		return
+
+	if(stat != DEAD)
+		to_chat(usr, SPAN_BOLDNOTICE("You have to have died to visit the afterlife!"))
+		return
+
+	var/datum/job/fallen/afterlife_job = tgui_input_list(usr, "You're going to the afterlife. What would you like to be?", "Visit the Afterlife.", GLOB.jobs_fallen_all)
+	if(!afterlife_job)
+		return
+	var/turf/spawn_loc = get_turf(pick(GLOB.spawns_by_job[/datum/job/fallen]))
+	var/mob/living/carbon/human/new_fallen = new(spawn_loc)
+	if(mind)
+		mind.transfer_to(new_fallen, TRUE)
+	else
+		new_fallen.create_hud()
+	new_fallen.client?.prefs.copy_all_to(new_fallen, afterlife_job)
+	if(afterlife_job.gear_preset)
+		arm_equipment(new_fallen, afterlife_job.gear_preset, FALSE)
+
+	RegisterSignal(new_fallen, COMSIG_MOB_DEATH, PROC_REF(delete_mob))
+	RegisterSignal(new_fallen, COMSIG_MOB_LOGOUT, PROC_REF(delete_mob))
+
+	log_game("[key_name(usr)] has joined the afterlife.")
+
+/mob/dead/observer/proc/delete_mob(mob/living/fallen_mob)
+	SIGNAL_HANDLER
+
+	UnregisterSignal(fallen_mob, COMSIG_MOB_DEATH)
+	UnregisterSignal(fallen_mob, COMSIG_MOB_LOGOUT)
+	qdel(fallen_mob)
+
 /mob/dead/observer/verb/observe()
 	set name = "Observe"
 	set category = "Ghost"

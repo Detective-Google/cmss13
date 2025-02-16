@@ -80,6 +80,9 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/centcom/living
 	name = "\improper abandoned  Centcom Living Quarters"
 
+/area/centcom/afterlife
+	name = "The Afterlife"
+
 /area/tdome
 	name = "\improper abandoned  Thunderdome"
 	icon_state = "thunder"
@@ -105,3 +108,4 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/tdome/tdomeobserve
 	name = "\improper abandoned  Thunderdome (Observer.)"
 	icon_state = "purple"
+

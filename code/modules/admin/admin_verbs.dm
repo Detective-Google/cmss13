@@ -79,6 +79,7 @@ GLOBAL_LIST_INIT(admin_verbs_default, list(
 
 GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/datum/admins/proc/togglejoin, /*toggles whether people can join the current game*/
+	/datum/admins/proc/toggle_afterlife, /* Toggles whether ghosts can spawn into the afterlife arena */
 	/datum/admins/proc/announce, /*priority announce something to all clients.*/
 	/datum/admins/proc/view_game_log, /*shows the server game log (diary) for this round*/
 	/datum/admins/proc/view_attack_log, /*shows the server attack log for this round*/
@@ -175,6 +176,7 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_admin_delete, /*delete an instance/object/mob/etc*/
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
+	/datum/admins/proc/toggle_afterlife,
 	/client/proc/toggle_cdn,
 ))
 

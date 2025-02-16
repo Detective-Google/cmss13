@@ -29,6 +29,19 @@
 	message_admins("[key_name_admin(usr)] toggled new player game joining.")
 	world.update_status()
 
+/datum/admins/proc/toggle_afterlife()
+	set name = "Toggle Joining Afterlife"
+	set desc = "Disallows joining the afterlife area."
+	set category = "Server"
+
+	GLOB.afterlife_allowed = !GLOB.afterlife_allowed
+	if(!GLOB.afterlife_allowed)
+		to_world("<B>Players may no longer join the afterlife.</B>")
+	else
+		to_world("<B>Players may now join the afterlife.</B>")
+	message_admins("[key_name_admin(usr)] toggled the afterlife.")
+	world.update_status()
+
 /datum/admins/proc/toggledsay()
 	set name = "Toggle Server Deadchat"
 	set desc = "Globally Toggles Deadchat"

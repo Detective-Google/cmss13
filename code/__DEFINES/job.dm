@@ -1,6 +1,7 @@
 #define get_job_playtime(client, job) (client.player_data? LAZYACCESS(client.player_data.playtimes, job)? client.player_data.playtimes[job].total_minutes MINUTES_TO_DECISECOND : 0 : 0)
 #define GET_MAPPED_ROLE(title) (GLOB.RoleAuthority?.role_mappings[title] ? GLOB.RoleAuthority.role_mappings[title] : GLOB.RoleAuthority.roles_by_name[title])
 #define GET_DEFAULT_ROLE(title) (GLOB.RoleAuthority?.default_roles[title] ? GLOB.RoleAuthority.default_roles[title] : title)
+GLOBAL_LIST_INIT(jobs_fallen_all, typecacheof(list(/datum/job/fallen)))
 
 // Squad name defines
 #define SQUAD_MARINE_1 "Alpha"

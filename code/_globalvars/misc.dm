@@ -7,6 +7,7 @@ GLOBAL_VAR_INIT(dooc_allowed, TRUE)
 GLOBAL_VAR_INIT(dlooc_allowed, FALSE)
 
 GLOBAL_VAR_INIT(enter_allowed, TRUE)
+GLOBAL_VAR_INIT(afterlife_allowed, TRUE)
 
 GLOBAL_LIST_EMPTY(admin_log)
 GLOBAL_LIST_EMPTY(asset_log)

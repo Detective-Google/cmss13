@@ -884,6 +884,7 @@
 #include "code\game\jobs\job\marine\squad\standard.dm"
 #include "code\game\jobs\job\marine\squad\tl.dm"
 #include "code\game\jobs\job\special\cmb.dm"
+#include "code\game\jobs\job\special\fallen.dm"
 #include "code\game\jobs\job\special\provost.dm"
 #include "code\game\jobs\job\special\responders.dm"
 #include "code\game\jobs\job\special\uscm.dm"
