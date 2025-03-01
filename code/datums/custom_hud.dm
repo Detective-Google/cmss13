@@ -115,6 +115,9 @@
 /datum/custom_hud/dark
 	ui_style_icon = 'icons/mob/hud/human_dark.dmi'
 
+/datum/custom_hud/debug
+	ui_style_icon = 'icons/mob/hud/screen_gen.dmi'
+
 	UI_FRAME_LOC = "EAST-3:0,NORTH-1:15"
 	UI_OXYGEN_LOC = "EAST-2:16,NORTH-1:15"
 	UI_NUTRITION_LOC = "EAST-2:33,NORTH-1:15"

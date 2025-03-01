@@ -92,6 +92,11 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 
 	return min(-100, target_mob.health)
 
+/datum/health_scan/proc/get_visual_status(mob/living/target_mob)
+	var/image/visual_status_icon = image('icons/mob/hud/screen_gen.dmi', target_mob, "healthdoll_FULL")
+	visual_status_icon.overlays += "r_leg1"
+	return visual_status_icon
+
 /datum/health_scan/ui_data(mob/user, data_detail_level = null)
 	var/list/data = list(
 		"patient" = target_mob.name,
@@ -106,7 +111,8 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 		"blood_amount" = target_mob.blood_volume,
 		"holocard" = get_holo_card_color(target_mob),
 		"hugged" = (locate(/obj/item/alien_embryo) in target_mob),
-		"ui_mode" = ui_mode
+		"ui_mode" = ui_mode,
+		"damage_icon" = get_visual_status(target_mob)
 	)
 
 	var/internal_bleeding = FALSE //do they have internal bleeding anywhere
@@ -192,6 +198,7 @@ GLOBAL_LIST_INIT(known_implants, subtypesof(/obj/item/implant))
 			var/list/core_body_parts = list("head", "chest", "groin")
 			var/list/current_list = list(
 				"name" = limb.display_name,
+				"id" = limb.name,
 				"brute" = floor(limb.brute_dam),
 				"burn" = floor(limb.burn_dam),
 				"bandaged" = limb.is_bandaged(),
