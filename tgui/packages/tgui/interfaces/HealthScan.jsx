@@ -608,6 +608,30 @@ const ScannerLimbsDebug = (props) => {
   const limb_data = Object.values(limb_data_lists);
   const bodyscanner = detail_level >= 1;
 
+  const LimbHeight = (a, b) => {
+    a = a.id;
+    b = b.id;
+    const LimbPriority = {
+      chest: 6,
+      r_arm: 5,
+      l_arm: 4,
+      r_leg: 3,
+      l_leg: 2,
+      groin: 1,
+    };
+    let valueA = LimbPriority[a];
+    let valueB = LimbPriority[b];
+
+    if (!valueA && !valueB) return 0; // They're both unknown
+    if (!valueA) return 1; // B is defined but A is not
+    if (!valueB) return -1; // A is defined but B is not
+
+    if (valueA > valueB) return -1; // A is more important
+    if (valueA < valueB) return 1; // B is more important
+
+    return 0; // They're equal
+  };
+
   let index = 0;
   const row_bg_color = 'rgba(255, 255, 255, .05)';
 
@@ -630,11 +654,16 @@ const ScannerLimbsDebug = (props) => {
                 mb="-10px"
               />
             </Stack.Item>
-            {limb_data.map((limb, index) => (
-              <Stack.Item key={limb} mb="-19.5px" mt="5px">
+            {limb_data.sort(LimbHeight).map((limb, index) => (
+              <Stack.Item key={limb.name} mb="-19.7px" mt="5.2px">
                 <DmIcon
                   icon="icons/mob/hud/screen_gen.dmi"
-                  icon_state={limb.id + '3'}
+                  icon_state={
+                    limb.id +
+                    (limb.burn + limb.brute >= 50
+                      ? '5'
+                      : Math.round((limb.burn + limb.brute) / 10))
+                  }
                   width="320px"
                   mt="-320px"
                   ml="-30px"
