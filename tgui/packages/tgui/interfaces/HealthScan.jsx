@@ -37,17 +37,16 @@ export const HealthScan = (props) => {
   return (
     <Window
       width={ui_mode ? 320 : 500}
-      height={bodyscanner ? 700 : 600}
+      height={bodyscanner ? 700 : 635}
       theme={theme}
       title={'Patient: ' + patient}
     >
       <Window.Content scrollable>
         <Patient />
-        <ScannerLimbsDebug />
+        <ScannerLimbs />
         {has_chemicals ? <ScannerChems /> : null}
-        <Misc />
         {diseases ? <Diseases /> : null}
-        {advice && !ui_mode ? <MedicalAdvice /> : null}
+        {!ui_mode ? <MedicalAdvice /> : null}
         {damaged_organs?.length && bodyscanner ? <ScannerOrgans /> : null}
       </Window.Content>
     </Window>
@@ -422,16 +421,18 @@ const MedicalAdvice = (props) => {
   const { advice } = data;
   return (
     <Section title="Medication Advice">
-      <Stack vertical>
-        {advice.map((advice) => (
-          <Stack.Item key={advice.advice}>
-            <Box inline>
-              <Icon name={advice.icon} ml={0.2} color={advice.color} />
-              <Box inline width={'5px'} />
-              {advice.advice}
-            </Box>
-          </Stack.Item>
-        ))}
+      <Stack vertical minHeight="55px">
+        {advice
+          ? advice.map((advice) => (
+              <Stack.Item key={advice.advice}>
+                <Box inline>
+                  <Icon name={advice.icon} ml={0.2} color={advice.color} />
+                  <Box inline width={'5px'} />
+                  {advice.advice}
+                </Box>
+              </Stack.Item>
+            ))
+          : null}
       </Stack>
     </Section>
   );
@@ -478,133 +479,14 @@ const ScannerChems = (props) => {
 
 const ScannerLimbs = (props) => {
   const { data } = useBackend();
-  const { limb_data_lists, detail_level, ui_mode, damage_icon } = data;
-  const limb_data = Object.values(limb_data_lists);
-  const bodyscanner = detail_level >= 1;
-
-  let index = 0;
-  const row_bg_color = 'rgba(255, 255, 255, .05)';
-
-  limb_data.forEach((limb) => {
-    limb.unbandaged = !limb.bandaged && limb.brute > 0 && !limb.limb_type;
-    limb.unsalved = !limb.salved && limb.burn > 0 && !limb.limb_type;
-  });
-
-  return (
-    <Section title={ui_mode ? null : 'Limbs Damaged'}>
-      <Stack vertical fill>
-        {ui_mode ? null : (
-          <Flex width="100%" height="20px">
-            <Flex.Item basis="85px" />
-            <Flex.Item basis="55px" bold color="red">
-              Brute
-            </Flex.Item>
-            <Flex.Item basis="55px" bold color="#ffb833">
-              Burn
-            </Flex.Item>
-            <Flex.Item grow="1" shrink="1" textAlign="right" nowrap>
-              {'{ } = Untreated'}
-            </Flex.Item>
-          </Flex>
-        )}
-        {limb_data.map((limb) => (
-          <Flex
-            key={limb.name}
-            width="100%"
-            minHeight="15px"
-            py="3px"
-            backgroundColor={index++ % 2 === 0 ? row_bg_color : ''}
-          >
-            <Flex.Item basis="85px" shrink="0" bold pl="3px">
-              {limb.name[0].toUpperCase() + limb.name.slice(1)}
-            </Flex.Item>
-            {limb.missing ? (
-              <Flex.Item color={'red'} bold={1}>
-                MISSING
-              </Flex.Item>
-            ) : (
-              <>
-                <Flex.Item basis="fit-content" shrink="0">
-                  <Box
-                    inline
-                    width="50px"
-                    color={limb.brute > 0 ? 'red' : 'white'}
-                  >
-                    {limb.unbandaged ? `{${limb.brute}}` : `${limb.brute}`}
-                  </Box>
-                  <Box
-                    inline
-                    width="40px"
-                    color={limb.burn > 0 ? '#ffb833' : 'white'}
-                  >
-                    {limb.unsalved ? `{${limb.burn}}` : `${limb.burn}`}
-                  </Box>
-                </Flex.Item>
-                <Flex.Item shrink="1">
-                  {limb.bleeding ? (
-                    <Box inline color={'red'} bold={1}>
-                      {ui_mode ? `[B]` : `[Bleeding]`}
-                    </Box>
-                  ) : null}
-                  {limb.internal_bleeding ? (
-                    <Box inline color={'red'} bold={1}>
-                      {ui_mode ? `[IB]` : `[Internal Bleeding]`}
-                    </Box>
-                  ) : null}
-                  {limb.limb_status ? (
-                    <Box inline color="white" bold={1}>
-                      {ui_mode ? '[F]' : `[${limb.limb_status}]`}
-                    </Box>
-                  ) : null}
-                  {limb.limb_splint ? (
-                    <Box inline color={'lime'} bold={1}>
-                      {ui_mode ? '[S]' : `[${limb.limb_splint}]`}
-                    </Box>
-                  ) : null}
-                  {limb.limb_type ? (
-                    <Box
-                      inline
-                      color={
-                        limb.limb_type === 'Nonfunctional Cybernetic'
-                          ? 'red'
-                          : 'green'
-                      }
-                      bold={1}
-                    >
-                      {ui_mode ? '[C]' : `[${limb.limb_type}]`}
-                    </Box>
-                  ) : null}
-                  {limb.open_incision ? (
-                    <Box inline color={'red'} bold={1}>
-                      {ui_mode ? `[OSI]` : `[Open Surgical Incision]`}
-                    </Box>
-                  ) : null}
-                  {limb.implant && bodyscanner ? (
-                    <Box inline color={'white'} bold={1}>
-                      {ui_mode ? `[E]` : `[Embedded Object]`}
-                    </Box>
-                  ) : null}
-                  {limb.open_zone_incision ? (
-                    <Box inline color={'red'} bold={1}>
-                      [Open Surgical Incision In {limb.open_zone_incision}]
-                      {ui_mode
-                        ? `[OSI:${limb.open_zone_incision}]`
-                        : `[Open Surgical Incision In ${limb.open_zone_incision}]`}
-                    </Box>
-                  ) : null}
-                </Flex.Item>
-              </>
-            )}
-          </Flex>
-        ))}
-      </Stack>
-    </Section>
-  );
-};
-
-const ScannerLimbsDebug = (props) => {
-  const { data } = useBackend();
-  const { limb_data_lists, detail_level, ui_mode, damage_icon } = data;
+  const {
+    limb_data_lists,
+    detail_level,
+    ui_mode,
+    damage_icon,
+    health,
+    patient,
+  } = data;
   const limb_data = Object.values(limb_data_lists);
   const bodyscanner = detail_level >= 1;
 
@@ -641,40 +523,41 @@ const ScannerLimbsDebug = (props) => {
   });
 
   return (
-    <Section title={ui_mode ? null : 'Limbs Damaged'}>
+    <Section title={ui_mode ? null : 'Health Report - ' + patient}>
       <Stack horizontal>
-        <Stack.Item width="50%" mt="-16px" ml="-22px">
-          <Stack vertical>
+        <Stack.Item width="40%" ml="2%">
+          <Stack vertical mt="-8px" align="center" width="100%">
             <Stack.Item>
               <DmIcon
                 icon="icons/mob/hud/screen_gen.dmi"
                 icon_state="healthdoll_OVERLAY"
                 width="320px"
-                ml="-30px"
-                mb="-10px"
+                mb="-10.3px"
               />
             </Stack.Item>
             {limb_data.sort(LimbHeight).map((limb, index) => (
-              <Stack.Item key={limb.name} mb="-19.7px" mt="5.2px">
-                <DmIcon
-                  icon="icons/mob/hud/screen_gen.dmi"
-                  icon_state={
-                    limb.id +
-                    (limb.burn + limb.brute >= 50
-                      ? '5'
-                      : Math.round((limb.burn + limb.brute) / 10))
-                  }
-                  width="320px"
-                  mt="-320px"
-                  ml="-30px"
-                />
+              <Stack.Item key={limb.name} mb="-19.9px" mt="5.3px">
+                <Box className="icon" onClick={() => setPicker('pill')}>
+                  <DmIcon
+                    icon="icons/mob/hud/screen_gen.dmi"
+                    icon_state={
+                      limb.id +
+                      (limb.burn + limb.brute >= 50
+                        ? '5'
+                        : Math.round((limb.burn + limb.brute) / 10))
+                    }
+                    width="320px"
+                    height="320px"
+                    mt="-320px"
+                  />
+                </Box>
               </Stack.Item>
             ))}
           </Stack>
         </Stack.Item>
-        <Stack.Item>
-          <Stack vertical>
-            {ui_mode ? null : (
+        <Stack.Item grow>
+          <Stack vertical height={(health >= 100 ? 120 : 235) + 'px'}>
+            {ui_mode ? null : health >= 100 ? null : (
               <Flex width="100%" height="20px">
                 <Flex.Item basis="85px" />
                 <Flex.Item basis="55px" bold color="red">
@@ -682,9 +565,6 @@ const ScannerLimbsDebug = (props) => {
                 </Flex.Item>
                 <Flex.Item basis="55px" bold color="#ffb833">
                   Burn
-                </Flex.Item>
-                <Flex.Item grow="1" shrink="1" textAlign="right" nowrap>
-                  {'{ } = Untreated'}
                 </Flex.Item>
               </Flex>
             )}
@@ -779,45 +659,10 @@ const ScannerLimbsDebug = (props) => {
               </Flex>
             ))}
           </Stack>
-        </Stack.Item>
-      </Stack>
-    </Section>
-  );
-};
-
-const ScannerLimbsDebugSecond = (props) => {
-  const { data } = useBackend();
-  const { limb_data_lists, detail_level, ui_mode, damage_icon } = data;
-  const limb_data = Object.values(limb_data_lists);
-  const bodyscanner = detail_level >= 1;
-
-  let index = 0;
-  const row_bg_color = 'rgba(255, 255, 255, .05)';
-
-  limb_data.forEach((limb) => {
-    limb.unbandaged = !limb.bandaged && limb.brute > 0 && !limb.limb_type;
-    limb.unsalved = !limb.salved && limb.burn > 0 && !limb.limb_type;
-  });
-
-  return (
-    <Section title={ui_mode ? null : 'Limbs Damaged'} width="100%">
-      <Stack vertical>
-        <Stack.Item>
-          <DmIcon
-            icon="icons/mob/hud/screen_gen.dmi"
-            icon_state="healthdoll_OVERLAY"
-            width="320px"
-            ml="-30px"
-          />
-        </Stack.Item>
-        <Stack.Item mt="-4px">
-          <DmIcon
-            icon="icons/mob/hud/screen_gen.dmi"
-            icon_state="l_arm4"
-            width="320px"
-            mt="-320px"
-            ml="-30px"
-          />
+          {health >= 100 ? null : <Divider />}
+          <Stack.Item fill mt="10px">
+            <Misc />
+          </Stack.Item>
         </Stack.Item>
       </Stack>
     </Section>
