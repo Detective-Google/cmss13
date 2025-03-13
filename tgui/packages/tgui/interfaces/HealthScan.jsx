@@ -1,5 +1,6 @@
 import { useBackend } from '../backend';
 import {
+  Blink,
   Box,
   Button,
   ColorBox,
@@ -37,16 +38,29 @@ export const HealthScan = (props) => {
   return (
     <Window
       width={ui_mode ? 320 : 500}
-      height={bodyscanner ? 700 : 635}
+      height={bodyscanner ? 700 : 647}
       theme={theme}
       title={'Patient: ' + patient}
     >
       <Window.Content scrollable>
         <Patient />
         <ScannerLimbs />
-        {has_chemicals ? <ScannerChems /> : null}
+
         {diseases ? <Diseases /> : null}
-        {!ui_mode ? <MedicalAdvice /> : null}
+        <Stack vertical>
+          {has_chemicals ? (
+            <Stack.Item width="35%">
+              <ScannerChems />
+            </Stack.Item>
+          ) : null}
+
+          {!ui_mode ? (
+            <Stack.Item fill>
+              <MedicalAdvice />{' '}
+            </Stack.Item>
+          ) : null}
+        </Stack>
+
         {damaged_organs?.length && bodyscanner ? <ScannerOrgans /> : null}
       </Window.Content>
     </Window>
@@ -333,33 +347,12 @@ const Misc = (props) => {
   const healthanalyser = detail_level < 1;
   const bodyscanner = detail_level >= 1;
   return (
-    <Section>
-      <LabeledList>
-        {has_blood ? (
-          <LabeledList.Item label={'Blood Type ' + blood_type}>
-            <Box
-              color={
-                bloodpct > 0.9 ? 'green' : bloodpct > 0.7 ? 'orange' : 'red'
-              }
-            >
-              {Math.round(blood_amount / 5.6)}%, {blood_amount}cl
-            </Box>
-          </LabeledList.Item>
-        ) : null}
-        <LabeledList.Item label={'Body Temperature'}>
-          {body_temperature}
-        </LabeledList.Item>
-        <LabeledList.Item label={'Pulse'}>{pulse}</LabeledList.Item>
-      </LabeledList>
-      {implants || hugged || core_fracture || (lung_ruptured && bodyscanner) ? (
-        <Divider />
-      ) : null}
+    <Box mt="10px">
       {implants && detail_level !== 1 ? (
         <NoticeBox danger>
-          {implants} embedded object{implants > 1 ? 's' : ''} detected!
-          {healthanalyser && !ui_mode
-            ? ' Advanced scanner required for location.'
-            : null}
+          {implants && !ui_mode} embedded object{implants > 1 ? 's' : ''}{' '}
+          detected!
+          {healthanalyser ? ' Advanced scanner required for location.' : null}
         </NoticeBox>
       ) : null}
       {(implants || hugged) && detail_level === 1 ? (
@@ -377,7 +370,7 @@ const Misc = (props) => {
           {!ui_mode ? ' Advanced scanner required for location.' : null}
         </NoticeBox>
       ) : null}
-    </Section>
+    </Box>
   );
 };
 
@@ -420,7 +413,7 @@ const MedicalAdvice = (props) => {
   const { data } = useBackend();
   const { advice } = data;
   return (
-    <Section title="Medication Advice">
+    <Section title="Medication Advice" fill>
       <Stack vertical minHeight="55px">
         {advice
           ? advice.map((advice) => (
@@ -444,7 +437,7 @@ const ScannerChems = (props) => {
   const chemicals = Object.values(chemicals_lists);
 
   return (
-    <Section title={ui_mode ? null : 'Chemical Contents'}>
+    <Section title={ui_mode ? null : 'Chemical Contents'} fill>
       {has_unknown_chemicals ? (
         <NoticeBox warning color="grey">
           Unknown reagents detected.
@@ -486,7 +479,17 @@ const ScannerLimbs = (props) => {
     damage_icon,
     health,
     patient,
+    has_blood,
+    blood_type,
+    blood_amount,
+    body_temperature,
+    pulse,
+    implants,
+    hugged,
+    core_fracture,
+    lung_ruptured,
   } = data;
+  const bloodpct = blood_amount / 560;
   const limb_data = Object.values(limb_data_lists);
   const bodyscanner = detail_level >= 1;
 
@@ -536,15 +539,17 @@ const ScannerLimbs = (props) => {
               />
             </Stack.Item>
             {limb_data.sort(LimbHeight).map((limb, index) => (
-              <Stack.Item key={limb.name} mb="-19.9px" mt="5.3px">
-                <Box className="icon" onClick={() => setPicker('pill')}>
+              <Stack.Item key={limb.name} mb="-20px" mt="5.4px">
+                <Box className="icon">
                   <DmIcon
                     icon="icons/mob/hud/screen_gen.dmi"
                     icon_state={
                       limb.id +
-                      (limb.burn + limb.brute >= 50
-                        ? '5'
-                        : Math.round((limb.burn + limb.brute) / 10))
+                      (!limb.missing
+                        ? limb.burn + limb.brute >= 50
+                          ? '5'
+                          : Math.round((limb.burn + limb.brute) / 10)
+                        : '6')
                     }
                     width="320px"
                     height="320px"
@@ -553,6 +558,24 @@ const ScannerLimbs = (props) => {
                 </Box>
               </Stack.Item>
             ))}
+            <Blink>
+              {limb_data.sort(LimbHeight).map((limb, index) => (
+                <Stack.Item key={limb.name} mb="-20px" mt="5.3px">
+                  <Box className="icon">
+                    <DmIcon
+                      icon="icons/mob/hud/screen_gen.dmi"
+                      icon_state={
+                        limb.id + (!limb.missing && limb.limb_status && '8')
+                      }
+                      width="320px"
+                      opacity="0.25"
+                      height="320px"
+                      mt="-320px"
+                    />
+                  </Box>
+                </Stack.Item>
+              ))}
+            </Blink>
           </Stack>
         </Stack.Item>
         <Stack.Item grow>
@@ -660,11 +683,34 @@ const ScannerLimbs = (props) => {
             ))}
           </Stack>
           {health >= 100 ? null : <Divider />}
-          <Stack.Item fill mt="10px">
-            <Misc />
+          <Stack.Item fill mt="10px" mb="5px">
+            <LabeledList>
+              {has_blood ? (
+                <LabeledList.Item label={'Blood Type ' + blood_type}>
+                  <Box
+                    color={
+                      bloodpct > 0.9
+                        ? 'green'
+                        : bloodpct > 0.7
+                          ? 'orange'
+                          : 'red'
+                    }
+                  >
+                    {Math.round(blood_amount / 5.6)}%, {blood_amount}cl
+                  </Box>
+                </LabeledList.Item>
+              ) : null}
+              <LabeledList.Item label={'Body Temperature'}>
+                {body_temperature}
+              </LabeledList.Item>
+              <LabeledList.Item label={'Pulse'}>{pulse}</LabeledList.Item>
+            </LabeledList>
           </Stack.Item>
         </Stack.Item>
       </Stack>
+      {implants || hugged || core_fracture || (lung_ruptured && bodyscanner) ? (
+        <Misc />
+      ) : null}
     </Section>
   );
 };
