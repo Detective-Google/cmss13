@@ -145,6 +145,7 @@
 					tutorial_menu()
 					return FALSE
 
+			deadmin_on_ready_or_latejoin()
 			late_join_ui.tgui_interact(src)
 			return TRUE
 
@@ -162,6 +163,7 @@
 					tutorial_menu()
 					return FALSE
 
+			deadmin_on_ready_or_latejoin()
 			late_choices_upp()
 			return TRUE
 
@@ -180,6 +182,7 @@
 						"Are you sure you wish to observe to be a xeno candidate?",
 						"When you observe, you will not be able to join as marine.",
 						"It might also take some time to become a xeno or responder!")
+					deadmin_on_ready_or_latejoin()
 					execute_on_confirm = CALLBACK(src, PROC_REF(observe_for_xeno))
 				return TRUE
 
@@ -189,6 +192,7 @@
 				return FALSE
 
 			if(SSticker.mode.check_predator_late_join(src, FALSE))
+				deadmin_on_ready_or_latejoin()
 				SSticker.mode.attempt_to_join_as_predator(src)
 				return TRUE
 
@@ -219,6 +223,7 @@
 			if((SSticker.current_state <= GAME_STATE_PREGAME) && !ready) // Make sure we don't ready up after the round has started
 				ready = TRUE
 				GLOB.readied_players++
+				deadmin_on_ready_or_latejoin()
 
 			return TRUE
 

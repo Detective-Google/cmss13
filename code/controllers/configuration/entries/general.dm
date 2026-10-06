@@ -135,6 +135,10 @@ Administrative related.
 
 /datum/config_entry/flag/allow_admin_ooccolor // Allows admins to customize their OOC color.
 
+/// Whether or not admins are forced to automatically de-admin upon attempting to join a round, skipped when they are the only present staff.
+/datum/config_entry/flag/auto_deadmin_enforce
+	config_entry_value = FALSE
+
 /datum/config_entry/flag/allow_vote_adjustment_callback
 
 /// logs all timers in buckets on automatic bucket reset (Useful for timer debugging)

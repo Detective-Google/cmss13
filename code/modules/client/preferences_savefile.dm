@@ -370,6 +370,7 @@
 	S["xeno_vision_level_pref"] >> xeno_vision_level_pref
 	S["xeno_defensive_grab_pref"] >> xeno_defensive_grab_pref
 	S["view_controller"] >> View_MC
+	S["auto_deadmin_latejoin"] >> auto_deadmin
 	S["observer_huds"] >> observer_huds
 	S["pref_special_job_options"] >> pref_special_job_options
 	S["pref_job_slots"] >> pref_job_slots
@@ -664,6 +665,7 @@
 	S["show_minimap_ceiling_protection"] << show_minimap_ceiling_protection
 
 	S["view_controller"] << View_MC
+	S["auto_deadmin_latejoin"] << auto_deadmin
 	S["observer_huds"] << observer_huds
 	S["pref_special_job_options"] << pref_special_job_options
 	S["pref_job_slots"] << pref_job_slots

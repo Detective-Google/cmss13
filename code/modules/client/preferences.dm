@@ -92,6 +92,8 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 	var/UI_style_color = "#ffffff"
 	var/UI_style_alpha = 255
 	var/View_MC = FALSE
+	/// Whether the user is automatically de-adminned when attempting to join a round, can be overridden true by server config.
+	var/auto_deadmin = TRUE
 	var/window_skin = 0
 	var/list/observer_huds = list(
 							"Medical HUD" = FALSE,
@@ -616,6 +618,8 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 				dat += "<b>OOC Country Flag:</b> <a href='byond://?_src_=prefs;preference=ooc_flag'><b>[(toggle_prefs & TOGGLE_OOC_FLAG) ? "Enabled" : "Disabled"]</b></a><br>"
 			if(CLIENT_HAS_RIGHTS(user.client, R_DEBUG))
 				dat += "<b>View Master Controller Tab:</b> <a href='byond://?_src_=prefs;preference=ViewMC'><b>[View_MC ? "TRUE" : "FALSE"]</b></a><br>"
+			if(CLIENT_HAS_RIGHTS(user.client, R_ADMIN) && !CONFIG_GET(flag/auto_deadmin_enforce))
+				dat += "<b>Automatic Deadmin:</b> <a href='byond://?_src_=prefs;preferences=auto_deadmin'><b>[auto_deadmin ? "TRUE" : "FALSE"]</b></a><br>"
 			if(unlock_content)
 				dat += "<b>BYOND Membership Publicity:</b> <a href='byond://?_src_=prefs;preference=publicity'><b>[(toggle_prefs & TOGGLE_MEMBER_PUBLIC) ? "Public" : "Hidden"]</b></a><br>"
 			dat += "<b>Ghost Ears:</b> <a href='byond://?_src_=prefs;preference=ghost_ears'><b>[(toggles_chat & CHAT_GHOSTEARS) ? "All Speech" : "Nearest Creatures"]</b></a><br>"
@@ -1905,6 +1909,9 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 				if("ViewMC")
 					if(CLIENT_HAS_RIGHTS(user.client, R_DEBUG))
 						View_MC = !View_MC
+
+				if("auto_deadmin")
+					auto_deadmin = !auto_deadmin
 
 				if("playtime_perks")
 					playtime_perks = !playtime_perks

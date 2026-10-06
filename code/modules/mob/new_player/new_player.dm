@@ -338,3 +338,17 @@
 	. += "Players: [SSticker.totalPlayers]"
 	if(client.admin_holder)
 		. += "Players Ready: [SSticker.totalPlayersReady]"
+
+/// Automatically deadmins when readying up for the round or latejoining.
+/mob/new_player/deadmin_on_ready_or_latejoin()
+	if(!client?.admin_holder)
+		return
+	if(CONFIG_GET(flag/auto_deadmin_enforce) || client?.prefs.auto_deadmin)
+		var/list/admin_counts = get_admin_counts(R_BAN)
+		if(admin_counts["present"] == 0) // Don't auto-deadmin as the only admin active.
+			to_chat(src, "<br><br><span class='centerbold'><big>Automatic De-admin skipped as the only active staff.</big></span><br>")
+			return
+		message_admins("[src] was automatically de-admined.")
+		add_verb(client, /client/proc/readmin_self)
+		client.deadmin()
+		to_chat(src, "<br><br><span class='centerbold'><big>You are now a normal player. You can ascend back to adminhood at any time using the 'Re-admin Self' verb in your Admin panel.</big></span><br>")
