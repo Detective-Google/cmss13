@@ -345,7 +345,7 @@
 		return
 	if(CONFIG_GET(flag/auto_deadmin_enforce) || client?.prefs.auto_deadmin)
 		var/list/admin_counts = get_admin_counts(R_BAN)
-		if(admin_counts["present"] == 0) // Don't auto-deadmin as the only admin active.
+		if(admin_counts["present"] <= 1) // Don't auto-deadmin as the only admin active.
 			to_chat(src, "<br><br><span class='centerbold'><big>Automatic De-admin skipped as the only active staff.</big></span><br>")
 			return
 		message_admins("[src] was automatically de-admined.")
