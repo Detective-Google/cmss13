@@ -340,7 +340,7 @@
 		. += "Players Ready: [SSticker.totalPlayersReady]"
 
 /// Automatically deadmins when readying up for the round or latejoining.
-/mob/new_player/deadmin_on_ready_or_latejoin()
+/mob/new_player/proc/deadmin_on_ready_or_latejoin()
 	if(!client?.admin_holder)
 		return
 	if(CONFIG_GET(flag/auto_deadmin_enforce) || client?.prefs.auto_deadmin)
